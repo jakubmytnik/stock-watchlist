@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+
+  stock-watchlist-be:
+    image: stock-watchlist-be:latest
+    depends_on:
+      - postgres
+    ports:
+      - 8090:8090
+      - 9999:9999
+
+  stocks-watchlist-fe:
+    image: stock-watchlist-fe:latest
+    depends_on:
+      - stock-watchlist-be
+    ports:
+      - 4200:4200
+
+  postgres:
+    image: postgres:11.8
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: "stock_watchlist_db"
+
+

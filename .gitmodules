@@ -1,0 +1,6 @@
+[submodule "stock-watchlist-be"]
+	path = stock-watchlist-be
+	url = https://github.com/jakubmytnik/stock-watchlist-be.git
+[submodule "stock-watchlist-fe"]
+	path = stock-watchlist-fe
+	url = https://github.com/jakubmytnik/stock-watchlist-fe.git
